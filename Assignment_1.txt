@@ -1,0 +1,35 @@
+create a java program to print your mother and father name, age, salary, phonenumber, address like city state country.
+
+Write a java program to print the below msg in the given format
+                                              hello
+		welcome     to 
+	edubridge       online         classes 	
+What is default package in java
+Scanner class is in which package?
+list the methods of Scanner class.
+list the types of datatypes with size and give an example of each by doing  declaring and initializating the variables.
+
+
+Write a program to display the names of your friends by calling the static methods.
+
+Write a program to add two number by using static method
+
+Explain the public static void main(String[] args) in detail.
+
+Write a program to display names of days by using commandLine arguments.
+
+What are the rules of naming the java file.
+what are the rules of naming the class
+what are the rules for naming the methods
+what are the rules for naming variables in java
+which is the main entry point of java program
+who is invoking the main method of java 
+why main has to be static method
+components of java program are?
+what is jvm,jre,jdk?
+Explain the components of compile time environments and run time environments.
+what is JIT?
+different types of memory in jvm.
+In which area .class is stored?
+In which area object are stored?
+Why do we call as java simple?
