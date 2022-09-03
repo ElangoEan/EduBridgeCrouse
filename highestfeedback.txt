@@ -1,0 +1,98 @@
+public class HighestFeebackCal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int size=0;
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter the array size");
+		size=scanner.nextInt();
+		int[] metArray=new int[size];
+		int[] hardArray=new int[size];
+		if(size<0)
+		{
+			System.out.println("Invalid arraySize");
+			System.exit(0);
+		}
+		System.out.println("enter the elements of the first array as employeeid and feedback");
+		for(int i=0;i<size;i++)
+		{
+			metArray[i]=scanner.nextInt();
+			if(metArray[i]<0)
+			{
+				System.out.println("Invalid Input");
+			}
+		}
+		
+		System.out.println("enter the elements of the second array as employeeid and feedback");
+		for(int i=0;i<size;i++)
+		{
+			hardArray[i]=scanner.nextInt();
+			
+			if(hardArray[i]<0)
+			{
+				System.out.println("Invalid Input");
+			}
+		}
+		
+		
+		highestFeedBack(metArray,hardArray,size);
+		
+	}
+static void highestFeedBack(int[] metArray,int[] hardArray,int size){
+        int res[]=new int[100];
+        int count,k=0,count1,i,j;
+        for(i=0;i<size;i=i+2)//i=2 0<8
+        {
+                    count=0;//0
+                    for( j=0;j<size;j=j+2)// j= 2 0<8
+                    {	
+                                if(metArray[i]==hardArray[j])//1 == 2
+                                {
+                                            count=1;
+                                            if(metArray[i+1]>hardArray[j+1])//80>90 false
+                                            {
+                                            	res[k]=metArray[i];//res[2]=
+                                            	res[++k]=metArray[i+1];//res[3]
+                                                        k++;
+                                            }
+else
+                                            {
+                                            	res[k]=metArray[i];//1 
+                                            	res[++k]=hardArray[j+1];
+                                                        k++;
+                                            }
+                                }
+                    }
+                    if(count==0)
+                    {
+                    	res[k]=metArray[i];
+                    	res[++k]=metArray[i+1];
+                                k++;
+                    }
+        }
+for(i=0;i<size;i=i+2)
+        {
+                    count1=0;
+                    for(j=0;j<size;j=j+2)
+                    {
+                                if(hardArray[i]==metArray[j])
+                                {
+                                            count1=1;
+                                }
+                    }
+                    if(count1!=1)
+                    {	
+                    	res[k]=hardArray[i];
+                    	res[++k]=hardArray[i+1];
+                                k++;
+                    }
+        }
+for(i=0;i<k;i++)
+        {
+                    System.out.println(res[i]);
+        }
+	}
+
+		
+	}
